@@ -5,6 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RevitTools"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid/>
+        Title="MainWindow" Height="450" Width="800" FontSize="10">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Expander Header="Expander" HorizontalAlignment="Left" Height="127" Margin="10,0,0,0" VerticalAlignment="Top" Width="140" Foreground="Black" BorderBrush="{x:Null}" Background="{x:Null}">
+            <Expander.ContextMenu>
+                <ContextMenu>
+                    <ContextMenu.ContextMenu>
+                        <ContextMenu/>
+                    </ContextMenu.ContextMenu>
+                </ContextMenu>
+            </Expander.ContextMenu>
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF038A91" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+            </Grid>
+        </Expander>
+        <Expander Header="Expander" HorizontalAlignment="Left" Height="127" Margin="10,127,0,0" VerticalAlignment="Top" Width="140" Foreground="Black" BorderBrush="{x:Null}" Background="{x:Null}">
+            <Expander.ContextMenu>
+                <ContextMenu>
+                    <ContextMenu.ContextMenu>
+                        <ContextMenu/>
+                    </ContextMenu.ContextMenu>
+                </ContextMenu>
+            </Expander.ContextMenu>
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF038A91" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+            </Grid>
+        </Expander>
+        <DataGrid Grid.Column="1" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="642">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Header="column 1"/>
+                <DataGridTemplateColumn/>
+                <DataGridComboBoxColumn/>
+            </DataGrid.Columns>
+            <Button/>
+
+            <Button/>
+            <Button/>
+            <Button/>
+            <Button/>
+            <Button/>
+            <Button/>
+            <Button/>
+        </DataGrid>
+    </Grid>
 </Window>
