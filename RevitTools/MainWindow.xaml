@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:RevitTools"
         mc:Ignorable="d"
         Title="BIM Tools" Height="500" Width="600" Topmost="True" ShowInTaskbar="False" Foreground="Black" Opacity="1" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="CanResizeWithGrip">
+    <!--The main grid for the UI-->
     <Grid Name="PrimaryGrid" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="35"/>
@@ -19,7 +20,9 @@
             <Button Name="TitleBarCloseButton" Content="X" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20" Click="TitleBarCloseButton_Click" Background="#FFC92020" FontWeight="Bold"/>
             <Button Name="TitleBarMinimizeButton" Content="-" Margin="0,0,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20" Background="#FFFBFBFB" FontWeight="Bold"/>
         </Grid>
+        <!--Primary Tabs-->
         <TabControl Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Name="PrimaryTabs" TabStripPlacement="Left" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <!--Knowledgebase tab-->
             <TabItem Name ="KnowledgebaseTab" Height="100" Width="30" Background="#FF00DCFF">
                 <TabItem.Header>
                     <TextBlock Text="Knowledgebase" Foreground="Black" FontWeight="SemiBold" FontSize="12" FontFamily="Calibri" RenderTransformOrigin="0,0">
@@ -37,6 +40,7 @@
                     <DropShadowEffect Direction="-45" BlurRadius="5" Opacity="0.5"></DropShadowEffect>
                 </TabItem.Effect>
             </TabItem>
+            <!--Data Viz tab-->
             <TabItem Name ="DataVizTab" Height="70" Width="30" Background="#FF09B6A6">
                 <TabItem.Header>
                     <TextBlock Text="Data Viz" Foreground="Black" FontWeight="SemiBold" FontSize="12" FontFamily="Calibri" RenderTransformOrigin="0,0">
@@ -54,6 +58,7 @@
                     <DropShadowEffect Direction="-45" BlurRadius="5" Opacity="0.5"></DropShadowEffect>
                 </TabItem.Effect>
             </TabItem>
+            <!--Revit Tools tab-->
             <TabItem Name ="RevitToolsTab" Height="80" Width="30" Background="#FF97FF00">
                 <TabItem.Header>
                     <TextBlock Text="Revit Tools" Foreground="Black" FontWeight="SemiBold" FontSize="12" FontFamily="Calibri" RenderTransformOrigin="0,0">
@@ -72,8 +77,35 @@
                 </TabItem.Effect>
                 <TabControl Name="RevitToolsTabs" TabStripPlacement="Top" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <TabItem Header="Modeling Tools" FontSize="11" FontFamily="Calibri">
+                        
                     </TabItem>
                     <TabItem Header="Annotation Tools" FontSize="11" FontFamily="Calibri">
+                        
+                    </TabItem>
+                </TabControl>
+            </TabItem>
+            <!--BIM Management tab-->
+            <TabItem Name ="BIMManagementTab" Height="125" Width="30" Background="Orange">
+                <TabItem.Header>
+                    <TextBlock Text="BIM Management" Foreground="Black" FontWeight="SemiBold" FontSize="12" FontFamily="Calibri" RenderTransformOrigin="0,0">
+                        <TextBlock.LayoutTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-90"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </TabItem.Header>
+                <TabItem.Effect>
+                    <DropShadowEffect Direction="-45" BlurRadius="5" Opacity="0.5"></DropShadowEffect>
+                </TabItem.Effect>
+                <TabControl Name="BIMManagementTabs" TabStripPlacement="Top" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TabItem Header="Project Tools" FontSize="11" FontFamily="Calibri">
+
+                    </TabItem>
+                    <TabItem Header="Family Tools" FontSize="11" FontFamily="Calibri">
 
                     </TabItem>
                 </TabControl>
