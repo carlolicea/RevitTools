@@ -5,61 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RevitTools"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" FontSize="10">
-    <Grid>
+        Title="BIM Tools" Height="450" Width="450" Topmost="True" ShowInTaskbar="False" Foreground="Black" Opacity="1" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="CanResizeWithGrip">
+    <Grid Name="PrimaryGrid" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="35"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Expander Header="Expander" HorizontalAlignment="Left" Height="127" Margin="10,0,0,0" VerticalAlignment="Top" Width="140" Foreground="Black" BorderBrush="{x:Null}" Background="{x:Null}">
-            <Expander.ContextMenu>
-                <ContextMenu>
-                    <ContextMenu.ContextMenu>
-                        <ContextMenu/>
-                    </ContextMenu.ContextMenu>
-                </ContextMenu>
-            </Expander.ContextMenu>
-            <Grid>
-                <Grid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="White" Offset="0"/>
-                        <GradientStop Color="#FF038A91" Offset="1"/>
-                    </LinearGradientBrush>
-                </Grid.Background>
-            </Grid>
-        </Expander>
-        <Expander Header="Expander" HorizontalAlignment="Left" Height="127" Margin="10,127,0,0" VerticalAlignment="Top" Width="140" Foreground="Black" BorderBrush="{x:Null}" Background="{x:Null}">
-            <Expander.ContextMenu>
-                <ContextMenu>
-                    <ContextMenu.ContextMenu>
-                        <ContextMenu/>
-                    </ContextMenu.ContextMenu>
-                </ContextMenu>
-            </Expander.ContextMenu>
-            <Grid>
-                <Grid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="White" Offset="0"/>
-                        <GradientStop Color="#FF038A91" Offset="1"/>
-                    </LinearGradientBrush>
-                </Grid.Background>
-            </Grid>
-        </Expander>
-        <DataGrid Grid.Column="1" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="642">
-            <DataGrid.Columns>
-                <DataGridCheckBoxColumn Header="column 1"/>
-                <DataGridTemplateColumn/>
-                <DataGridComboBoxColumn/>
-            </DataGrid.Columns>
-            <Button/>
-
-            <Button/>
-            <Button/>
-            <Button/>
-            <Button/>
-            <Button/>
-            <Button/>
-            <Button/>
-        </DataGrid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Name="TitleBar" Grid.Column="1" Background="#FF00DCFF" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button Name="TitleBarCloseButton" Content="X" Margin="0,4,4,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="30" Click="TitleBarCloseButton_Click" Background="#FFC92020" FontWeight="Bold"/>
+            <Button Name="TitleBarMinimizeButton" Content="-" Margin="0,4,35,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="30" Background="#FFFBFBFB" FontWeight="Bold"/>
+        </Grid>
+        <TabControl Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Name="PrimaryTabs" TabStripPlacement="Left" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TabItem Name ="KnowledgebaseTab" Height="125" Width="30" Background="#FF00DCFF">
+                <TabItem.Header>
+                    <TextBlock Text="Knowledgebase" Foreground="Black" FontWeight="SemiBold" FontSize="12" RenderTransformOrigin="0,0">
+                        <TextBlock.LayoutTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-90"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </TabItem.Header>
+                <TabItem.Effect>
+                    <DropShadowEffect Direction="-45" BlurRadius="5" Opacity="0.5"></DropShadowEffect>
+                </TabItem.Effect>
+            </TabItem>
+            <TabItem Name ="DataVizTab" Height="125" Width="30" Background="#FF97F737">
+                <TabItem.Header>
+                    <TextBlock Text="Data Viz" Foreground="Black" FontWeight="SemiBold" FontSize="12" RenderTransformOrigin="0,0">
+                        <TextBlock.LayoutTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-90"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </TabItem.Header>
+                <TabItem.Effect>
+                    <DropShadowEffect Direction="-45" BlurRadius="5" Opacity="0.5"></DropShadowEffect>
+                </TabItem.Effect>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

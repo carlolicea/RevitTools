@@ -20,9 +20,21 @@ namespace RevitTools
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Window mainUI = null;
         public MainWindow()
         {
             InitializeComponent();
+            mainUI = this;
+        }
+
+        private void TitleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            mainUI.DragMove();
+        }
+
+        private void TitleBarCloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainUI.Close();
         }
     }
 }

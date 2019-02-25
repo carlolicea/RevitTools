@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:RevitTools"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <SolidColorBrush x:Key="TabItem.Selected.Background" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="TabItem.Selected.Border" Color="#FF898C95"/>
+       
     </Application.Resources>
 </Application>
